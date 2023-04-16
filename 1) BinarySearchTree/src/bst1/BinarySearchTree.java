@@ -38,7 +38,7 @@ public class BinarySearchTree {
             return search(root.getLeft(), key);
         }
         else{
-            return search(root.getRight(), key)
+            return search(root.getRight(), key);
         }
     }
 

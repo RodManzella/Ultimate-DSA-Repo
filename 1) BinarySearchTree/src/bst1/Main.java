@@ -11,5 +11,12 @@ public class Main {
         bst.insert(1);
 
         bst.inOrder();
+
+        if(null != bst.search(3)){
+            System.out.println("Found");
+        }
+        else{
+            System.out.println("Not found");
+        }
     }
 }
