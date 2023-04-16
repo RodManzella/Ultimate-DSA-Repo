@@ -14,7 +14,6 @@ public class BinarySearchTree {
             root = new TreeNode(value);
             return root;
         }
-
         if(value < root.getData()){
             root.setLeft(insert(root.getLeft(), value));
         }
@@ -23,6 +22,24 @@ public class BinarySearchTree {
         }
 
         return root;
+    }
+
+    public TreeNode search(int key){
+        return search(root, key);
+    }
+
+    private TreeNode search (TreeNode root, int key){
+
+        if(root == null || root.getData() == key){
+            return root;
+        }
+
+        if(key < root.getData()){
+            return search(root.getLeft(), key);
+        }
+        else{
+            return search(root.getRight(), key)
+        }
     }
 
     public void inOrder(){
