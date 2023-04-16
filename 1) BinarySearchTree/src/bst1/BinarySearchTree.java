@@ -20,7 +20,6 @@ public class BinarySearchTree {
         else{
             root.setRight(insert(root.getRight(), value));
         }
-
         return root;
     }
 
