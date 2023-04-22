@@ -54,4 +54,23 @@ public class BinarySearchTree {
         System.out.println(root.getData());
         inOrder(root.getRight());
     }
+
+    public int findMax(TreeNode root){
+        if (root == null){
+            return Integer.MIN_VALUE;
+        }
+        
+        int result = root.getData();
+        int left = findMax(root.getLeft());
+        int right = findMax(root.getRight());
+
+        if(left > result){
+            result = left;
+        }
+
+        if(right > result){
+            result = right;
+        }
+        return result;
+    }
 }
