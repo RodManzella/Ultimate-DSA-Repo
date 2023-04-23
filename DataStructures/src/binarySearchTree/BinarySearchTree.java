@@ -73,4 +73,23 @@ public class BinarySearchTree {
         }
         return result;
     }
+
+    public int findMin(TreeNode root){
+        if (root == null){
+            return Integer.MAX_VALUE;
+        }
+        
+        int result = root.getData();
+        int left = findMax(root.getLeft());
+        int right = findMax(root.getRight());
+
+        if(left < result){
+            result = left;
+        }
+
+        if(right < result){
+            result = right;
+        }
+        return result;
+    }
 }
