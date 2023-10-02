@@ -49,28 +49,29 @@ package Graphs.BFS;
          } 
      }
 
+     public void addEdge(int u, int v){
+        this.grafo.get(u).add(v);
+     }
+
      public void caminhoMin(int inicio, int fim){
 
-        Integer []caminhoMin = new Integer[grafo.size()];
+        LinkedList<Integer> caminhoMin = new LinkedList<Integer>();
         int cont = 0;
-        int contArray = 1;
         int u;
-        caminhoMin[0] = inicio;
+        caminhoMin.add(inicio);
         
 
         do{
            
-            u = ante[caminhoMin[cont]];
-            caminhoMin[contArray] = u;
+            u = ante[caminhoMin.get(cont)];
+            caminhoMin.add(u);
             cont++;
-            contArray++;
-
 
         }while(u != fim);
 
-        for(int i = 0; i < caminhoMin.length; i++){
-            System.out.println(caminhoMin[i]);
+        for(int i = 0; i < caminhoMin.size(); i++){
+            System.out.println(caminhoMin.get(i));
         }
 
-    } 
+    }
  }
