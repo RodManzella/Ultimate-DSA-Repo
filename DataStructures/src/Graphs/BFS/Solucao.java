@@ -47,5 +47,30 @@ package Graphs.BFS;
   
            cor[u] = PRETO; 
          } 
-     } 
+     }
+
+     public void caminhoMin(int inicio, int fim){
+
+        Integer []caminhoMin = new Integer[grafo.size()];
+        int cont = 0;
+        int contArray = 1;
+        int u;
+        caminhoMin[0] = inicio;
+        
+
+        do{
+           
+            u = ante[caminhoMin[cont]];
+            caminhoMin[contArray] = u;
+            cont++;
+            contArray++;
+
+
+        }while(u != fim);
+
+        for(int i = 0; i < caminhoMin.length; i++){
+            System.out.println(caminhoMin[i]);
+        }
+
+    } 
  }
