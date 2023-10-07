@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AdjacencyList",
+            "request": "launch",
+            "mainClass": "Graphs.AdjacencyList.AdjacencyList",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        },
+        {
+            "type": "java",
+            "name": "AdjacencyMatrix",
+            "request": "launch",
+            "mainClass": "Graphs.AdjacencyMatrix.AdjacencyMatrix",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        },
+        {
+            "type": "java",
+            "name": "Graph",
+            "request": "launch",
+            "mainClass": "Graphs.BFS.Graph",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        },
+        {
+            "type": "java",
+            "name": "Graph1",
+            "request": "launch",
+            "mainClass": "Graphs.BFS.Graph1",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        },
+        {
+            "type": "java",
+            "name": "GrafoDesafio1",
+            "request": "launch",
+            "mainClass": "Graphs.DFSMatrix.GrafoDesafio1",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "binarySearchTree.Main",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        },
+        {
+            "type": "java",
+            "name": "SinglyLinkedList",
+            "request": "launch",
+            "mainClass": "singlyLinkedList.SinglyLinkedList",
+            "projectName": "Ultimate-DSA-Repo_740f117b"
+        }
+    ]
+}

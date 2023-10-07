@@ -47,7 +47,7 @@ public class GrafoDesafio1 {
     }
 
     public void dfs_visit(int u){
-
+        
           // tempo = 0
         i[u] = tempo;  // i[o] = 0  sendo 0 o vértice inicial
         cor[u] = CINZA;  // cor[0] = CINZA
@@ -75,37 +75,10 @@ public class GrafoDesafio1 {
         tempo++;
         f[u] = tempo;
         cor[u] = PRETO;
-    }
-
-    public void sum_target(int u, int target){
-        tempo++;
-        i[u] = tempo;
-        cor[u] = CINZA;
-
-        LinkedList<Integer> adj = new LinkedList<Integer>();
-
-        for(int i = 0; i < grafo.length; i++){
-
-            if(grafo[u][i] == true){
-                adj.add(i);
-            }
-
-        }
-
-        for(int v : adj){
-
-            if(cor[v] == BRANCO){
-                ante[v] = u;
-                dfs_visit(v);
-            }
-
-        }
-
-        tempo++;
-        f[u] = tempo;
-        cor[u] = PRETO;
         sum += u;
     }
+
+   
 
 
 
