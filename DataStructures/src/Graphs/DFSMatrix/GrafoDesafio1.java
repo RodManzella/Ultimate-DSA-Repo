@@ -16,6 +16,7 @@ public class GrafoDesafio1 {
     public int sum = 0;
     private boolean [][] grafo;
 
+
     public GrafoDesafio1(int vertices){
         this.grafo = new boolean[vertices][vertices];
     }
@@ -25,12 +26,13 @@ public class GrafoDesafio1 {
         this.grafo[v][u] = true;
     }
 
-    public void dfs_start(int s){
+    public void dfs_start(int s, int target){
 
         this.ante = new int[grafo.length];
         this.i = new int[grafo.length];
         this.f = new int[grafo.length];
         this.cor = new int[grafo.length];
+
 
         for(int j = 0; j < grafo.length; j++){
 
@@ -41,33 +43,30 @@ public class GrafoDesafio1 {
         }
 
         tempo = -1;
-        dfs_visit(s);
+        dfs_visit(s, target);
 
 
     }
 
-    public void dfs_visit(int u){
-        
-          // tempo = 0
+    public void dfs_visit(int u, int target){
+        sum+= u;
+        tempo++;
         i[u] = tempo;  // i[o] = 0  sendo 0 o vértice inicial
         cor[u] = CINZA;  // cor[0] = CINZA
 
         LinkedList<Integer> adj = new LinkedList<Integer>();
         // cria linkedlist
-
         for(int i = 0; i < grafo.length; i++){
 
             if(grafo[u][i] == true){
                 adj.add(i);
+            
             }
-
         }
-
         for(int v : adj){
-
             if(cor[v] == BRANCO){
                 ante[v] = u;
-                dfs_visit(v);
+                dfs_visit(v, target);
             }
 
         }
@@ -75,7 +74,6 @@ public class GrafoDesafio1 {
         tempo++;
         f[u] = tempo;
         cor[u] = PRETO;
-        sum += u;
     }
 
    
@@ -89,7 +87,7 @@ public class GrafoDesafio1 {
         grafo.addEdge(10, 15);
         grafo.addEdge(10, 5);
         grafo.addEdge(15, 1);
-        grafo.dfs_start(10);
+        grafo.dfs_start(10, 15);
     }
 
 }
